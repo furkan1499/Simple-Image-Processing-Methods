@@ -33,3 +33,15 @@ cv2.imwrite("sobelx_heisenberg.jpg", sobelx)
 cv2.imwrite("sobely_heisenberg.jpg", sobely)
 
 print("---end sobel operator---")
+
+print("---start blur images---")
+
+# firstly read the image
+img = cv2.imread('heisenberg.jpg')
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# blurred image
+blurred_img = cv2.blur(img, ksize=(20, 20))
+cv2.imwrite("blurred_img.jpg", blurred_img)
+
+print("---end blur images---")
